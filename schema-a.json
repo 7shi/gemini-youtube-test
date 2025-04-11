@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "transcriptions": {
+      "type": "array",
+      "description": "An array containing transcriptions extracted from the video.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "The timestamp indicating when the scene occurs in the video ('HH:MM:SS')."
+          },
+          "speaker": {
+            "type": "string",
+            "description": "Who is speaking."
+          },
+          "transcription": {
+            "type": "string",
+            "description": "A transcriptions of the audio content."
+          }
+        },
+        "required": [
+          "time",
+          "speaker",
+          "transcription"
+        ]
+      }
+    }
+  },
+  "required": [
+    "transcriptions"
+  ]
+}
