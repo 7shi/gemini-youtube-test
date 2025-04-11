@@ -63,6 +63,7 @@ uv run gemini-yt -m gemini-2.5-pro-exp-03-25 -s schema-m.json -o my-analysis.jso
 - `test-article.py`: Article generator for processed video content
 - `schema-1.json`: Basic JSON schema
 - `schema-m.json`: Detailed JSON schema (with speaker information)
+- `schema-a.json`: Transcription of audio only
 
 ### Output Files
 
