@@ -1,5 +1,5 @@
 - model: gemini-2.0-flash
-- uri  : https://www.youtube.com/watch?v=n17NFYBBjXY
+- uri  : https://youtu.be/n17NFYBBjXY
 
 > 動画の内容を、内容のまとまりごとに区切って（時間を明示）、映像を文章化して、音声の文字起こしを添えて出力してください。
 
