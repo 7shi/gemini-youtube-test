@@ -14,19 +14,29 @@ This project serves as a test environment for:
 ## Project Structure
 
 - `common.py`: Common utility functions
-- `fall-json.py`: JSON generator for Fall video analysis
-- `fall-text.py`: Text generator for Fall video analysis
-- `neolatin-json.py`: JSON generator for Neolatin video analysis
+- `test-json.py`: Test JSON generator
+- `test-text.py`: Test Text generator
 - `article.py`: Article generator for processed video content
 - `schema-1.json`: Basic JSON schema
 - `schema-m.json`: Detailed JSON schema (with speaker information)
 
-## Models Used
+### Output Files
 
-- Gemini 2.5 Pro (Experimental)
-- Gemini 2.0 Flash
+Generated files are stored in the following directories:
 
-## Output Formats
+- `json/`: JSON analysis results
+- `text/`: Markdown analysis results
+- `article/`: Generated article content from processed video analysis
+- `test/`: Test files and scripts, which are remnants of initial experimental setups
+
+File naming convention:
+
+- `-25p-`: Generated using Gemini 2.5 Pro Experimental 03-25
+- `-20f-`: Generated using Gemini 2.0 Flash
+- `-1.json`: Single schema (single transcript for the entire scene)
+- `-m.json`: Multiple schema (multiple transcripts split by speaker)
+- `-en.md`: English Prompt
+- `-ja.md`: Japanese Prompt
 
 ### JSON Format
 
@@ -39,29 +49,3 @@ This project serves as a test environment for:
 - Chronological scene descriptions
 - Text transcription of visual elements and audio
 - Bilingual output (Japanese/English)
-
-## Output Files
-
-Generated files are stored in the following directories:
-
-- `fall-json/`: JSON analysis results for Fall videos
-- `fall-text/`: Markdown analysis results for Fall videos
-- `neolatin-json/`: JSON analysis results for Neolatin videos
-- `article/`: Generated article content from processed video analysis
-
-File naming convention:
-
-- `25p-`: Generated using Gemini 2.5 Pro
-- `20f-`: Generated using Gemini 2.0 Flash
-- `-1.json`: Single schema (single transcript for the entire scene)
-- `-m.json`: Multiple schema (multiple transcripts split by speaker)
-- `-en.md`: English Markdown
-- `-ja.md`: Japanese Markdown
-
-### Testing
-
-The `test/` directory contains sample files and test scripts:
-
-- `test-json.py`: Tests JSON generation functionality
-- `test-text.py`: Tests Markdown generation functionality
-- Sample generated files in `test/json/` and `test/text/`
