@@ -38,6 +38,7 @@ uv run gemini-yt -m <model> -s <schema_file> <youtube_url>
 ```
 
 Parameters:
+- `-v`, `--version`: Show the version of the script
 - `-m`, `--model`: (Required) The Gemini model to use (e.g., "gemini-2.5-pro-exp-03-25", "gemini-2.0-flash")
 - `-s`, `--schema`: Schema file to use (optional)
 - `-o`, `--output`: Output filename (optional, defaults to YouTube ID with .json extension)
@@ -56,10 +57,10 @@ uv run gemini-yt -m gemini-2.5-pro-exp-03-25 -s schema-m.json -o my-analysis.jso
 
 ## Project Structure
 
-- `common.py`: Common utility functions
+- `gemini_yt/`: Main package directory containing the core functionality
 - `test-json.py`: Test JSON generator
 - `test-text.py`: Test Text generator
-- `article.py`: Article generator for processed video content
+- `test-article.py`: Article generator for processed video content
 - `schema-1.json`: Basic JSON schema
 - `schema-m.json`: Detailed JSON schema (with speaker information)
 
