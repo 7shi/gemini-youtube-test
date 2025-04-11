@@ -11,12 +11,16 @@ targets = [
     ("https://youtu.be/BrHClxlgUnw", "neolatin"),
 ]
 
-prompt = "動画の内容を記事として書き直してください。"
+prompts = [
+    ("ja", "動画の内容を日本語で記事として書き直してください。"),
+    ("en", "Rewrite the content of the video as an article in English."),
+]
 
 dir = os.path.splitext(__file__)[0]
 os.makedirs(dir, exist_ok=True)
 
-for uri, target in targets:
-    for m, model in models:
-        filename = f"{dir}/{target}-{m}.md"
-        common.generate(model, uri, prompt, config, filename)
+for lang, prompt in prompts:
+    for uri, target in targets:
+        for m, model in models:
+            filename = f"{dir}/{target}-{m}-{lang}.md"
+            common.generate(model, uri, prompt, config, filename)
