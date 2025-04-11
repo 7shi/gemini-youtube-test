@@ -63,7 +63,7 @@ def generate_content_retry(model, config, contents):
                 print(chunk.text, end="")
                 text += chunk.text
             return text
-        except genai.errors.ServerError as e:
+        except genai.errors.APIError as e:
             if e.code in [429, 500, 503]:
                 print(e, file=sys.stderr)
                 for i in range(15, -1, -1):
