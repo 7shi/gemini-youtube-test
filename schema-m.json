@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "scenes": {
+      "type": "array",
+      "description": "An array containing individual scenes extracted from the video.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "The timestamp indicating when the scene occurs in the video ('HH:MM:SS')."
+          },
+          "visuals": {
+            "type": "string",
+            "description": "A description or analysis of the visual content of the scene."
+          },
+          "audio": {
+            "type": "array",
+            "description": "Transcriptions of the audio content of the scene.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "speaker": {
+                  "type": "string"
+                },
+                "transcription": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "speaker",
+                "transcription"
+              ]
+            }
+          }
+        },
+        "required": [
+          "time",
+          "visuals",
+          "audio"
+        ]
+      }
+    }
+  },
+  "required": [
+    "scenes"
+  ]
+}

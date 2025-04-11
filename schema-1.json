@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "The timestamp indicating when the scene occurs in the video ('HH:MM:SS')."
+          },
+          "visuals": {
+            "type": "string",
+            "description": "A description or analysis of the visual content of the scene."
+          },
+          "audio": {
+            "type": "string",
+            "description": "A transcription of the audio content of the scene."
+          }
+        },
+        "required": [
+          "time",
+          "visuals",
+          "audio"
+        ]
+      },
+      "description": "An array containing individual scenes extracted from the video."
+    }
+  },
+  "required": [
+    "scenes"
+  ]
+}
