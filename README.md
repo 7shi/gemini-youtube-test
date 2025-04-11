@@ -17,6 +17,7 @@ This project serves as a test environment for:
 - `fall-json.py`: JSON generator for Fall video analysis
 - `fall-text.py`: Text generator for Fall video analysis
 - `neolatin-json.py`: JSON generator for Neolatin video analysis
+- `article.py`: Article generator for processed video content
 - `schema-1.json`: Basic JSON schema
 - `schema-m.json`: Detailed JSON schema (with speaker information)
 
@@ -46,6 +47,7 @@ Generated files are stored in the following directories:
 - `fall-json/`: JSON analysis results for Fall videos
 - `fall-text/`: Markdown analysis results for Fall videos
 - `neolatin-json/`: JSON analysis results for Neolatin videos
+- `article/`: Generated article content from processed video analysis
 
 File naming convention:
 
