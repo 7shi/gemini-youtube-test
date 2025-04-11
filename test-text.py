@@ -1,10 +1,11 @@
-import os, common
+import os
+import gemini_yt.gemini as gemini
 
 models = [
     ("25p", "gemini-2.5-pro-exp-03-25"),
     ("20f", "gemini-2.0-flash"),
 ]
-config = common.config_text
+config = gemini.config_text
 targets = [
     ("https://youtu.be/n17NFYBBjXY", "fall"),
     # ("https://youtu.be/BrHClxlgUnw", "neolatin"),
@@ -21,4 +22,4 @@ for uri, target in targets:
     for lang, prompt in prompts:
         for m, model in models:
             filename = f"{dir}/{target}-{m}-{lang}.md"
-            common.generate(model, uri, prompt, config, filename)
+            gemini.generate(model, uri, prompt, config, filename)

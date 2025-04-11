@@ -10,6 +10,49 @@ This project serves as a test environment for:
 - Structured recording of visual elements and audio content
 - Content generation using multiple Gemini models (2.5 Pro and 2.0 Flash)
 - Output support in both JSON and Markdown formats
+- `gemini-yt` tool includes sample analysis scripts to help you get started.
+
+## Prerequisites
+
+To set up the environment for running the scripts, follow these steps:
+
+1. Ensure you have `uv` installed on your system.
+2. Clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/7shi/gemini-youtube-test.git
+    cd gemini-youtube-test
+    ```
+3. Install the required dependencies using `uv`:
+    ```bash
+    uv sync
+    ```
+
+Once the setup is complete, you can proceed to run the scripts as described in the usage section.
+
+## Running the Sample Command
+
+Use the `gemini-yt` command to analyze YouTube videos:
+
+```bash
+uv run gemini-yt -m <model> -s <schema_file> <youtube_url>
+```
+
+Parameters:
+- `-m`, `--model`: (Required) The Gemini model to use (e.g., "gemini-2.5-pro-exp-03-25", "gemini-2.0-flash")
+- `-s`, `--schema`: Schema file to use (optional)
+- `-o`, `--output`: Output filename (optional, defaults to YouTube ID with .json extension)
+- `-p`, `--prompt`: Custom prompt to use for analysis (optional)
+- `url`: YouTube URL to analyze
+
+Examples:
+
+```bash
+# Analyze with default settings, using Gemini 2.5 Pro Experimental 03-25
+uv run gemini-yt -m gemini-2.5-pro-exp-03-25 https://www.youtube.com/watch?v=n17NFYBBjXY
+
+# Analyze with custom schema and output filename
+uv run gemini-yt -m gemini-2.5-pro-exp-03-25 -s schema-m.json -o my-analysis.json https://www.youtube.com/watch?v=n17NFYBBjXY
+```
 
 ## Project Structure
 

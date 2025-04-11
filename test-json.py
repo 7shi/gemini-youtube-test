@@ -1,4 +1,5 @@
-import os, common
+import os
+import gemini_yt.gemini as gemini
 
 models = [
     ("25p", "gemini-2.5-pro-exp-03-25"),
@@ -15,7 +16,7 @@ os.makedirs(dir, exist_ok=True)
 
 for uri, target in targets:
     for suffix in ["1", "m"]:
-        config = common.config_from_schema(f"schema-{suffix}.json")
+        config = gemini.config_from_schema(f"schema-{suffix}.json")
         for m, model in models:
             filename = f"{dir}/{target}-{m}-{suffix}.json"
-            common.generate(model, uri, prompt, config, filename)
+            gemini.generate(model, uri, prompt, config, filename)
