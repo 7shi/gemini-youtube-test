@@ -1,4 +1,4 @@
-import os, sys, json, time
+import os, sys, json, time, re
 from google import genai
 from google.genai import types
 
@@ -66,10 +66,15 @@ def generate_content_retry(model, config, contents):
         except genai.errors.APIError as e:
             if e.code in [429, 500, 503]:
                 print(e, file=sys.stderr)
-                for i in range(15, -1, -1):
-                    print(f"\rRetrying... {i:2d}", end="", file=sys.stderr, flush=True)
-                    if i:
-                        time.sleep(1)
+                delay = 15
+                if e.code == 429:
+                    details = e.details["error"]["details"]
+                    if [rd for d in details if (rd := d.get("retryDelay"))]:
+                        if m := re.match(r"^(\d+)s$", rd):
+                            delay = int(m.group(1)) or delay
+                for i in range(delay, -1, -1):
+                    print(f"\rRetrying... {i}s ", end="", file=sys.stderr, flush=True)
+                    time.sleep(1)
                 print(file=sys.stderr)
                 continue
             else:
