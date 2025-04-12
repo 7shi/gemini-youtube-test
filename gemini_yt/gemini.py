@@ -64,7 +64,7 @@ def generate_content_retry(model, config, contents):
                 text += chunk.text
             return text
         except genai.errors.APIError as e:
-            if e.code in [429, 500, 503]:
+            if hasattr(e, "code") and e.code in [429, 500, 503]:
                 print(e, file=sys.stderr)
                 delay = 15
                 if e.code == 429:
