@@ -13,10 +13,7 @@ def main():
     parser.add_argument("url", help="URL to process")
     args = parser.parse_args()
 
-    if output := args.output:
-        if not output.endswith(".json"):
-            output += ".json"
-    else:
+    if not (output := args.output):
         if m := re.search(r'([a-zA-Z0-9]+)$', args.url):
             output = m.group(1) + ".json"
         else:
