@@ -61,7 +61,8 @@ def generate_content_retry(model, config, contents):
             text = ""
             for chunk in response:
                 print(chunk.text, end="")
-                text += chunk.text
+                if chunk.text:
+                    text += chunk.text
             return text
         except genai.errors.APIError as e:
             if hasattr(e, "code") and e.code in [429, 500, 503]:
