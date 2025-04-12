@@ -16,13 +16,14 @@ This project serves as a test environment for:
 
 To set up the environment for running the scripts, follow these steps:
 
-1. Ensure you have `uv` installed on your system.
-2. Clone the repository to your local machine:
+1. Obtain an API Key from [Google AI Studio](https://aistudio.google.com/) and set it as the environment variable `GEMINI_API_KEY`.
+2. Ensure you have `uv` installed on your system.
+3. Clone the repository to your local machine:
     ```bash
     git clone https://github.com/7shi/gemini-youtube-test.git
     cd gemini-youtube-test
     ```
-3. Install the required dependencies using `uv`:
+4. Install the required dependencies using `uv`:
     ```bash
     uv sync
     ```
