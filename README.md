@@ -73,7 +73,6 @@ Generated files are stored in the following directories:
 - `json/`: JSON analysis results
 - `text/`: Markdown analysis results
 - `article/`: Generated article content from processed video analysis
-- `test/`: Test files and scripts, which are remnants of initial experimental setups
 
 File naming convention:
 

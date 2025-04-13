@@ -9,7 +9,6 @@ models = [
 ]
 targets = [
     ("https://youtu.be/n17NFYBBjXY", "fall"),
-    ("https://youtu.be/BrHClxlgUnw", "neolatin"),
 ]
 prompt = "Please analyze the video according to the JSON schema."
 

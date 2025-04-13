@@ -11,7 +11,6 @@ config = gemini.config_text
 
 targets = [
     ("https://youtu.be/n17NFYBBjXY", "fall"),
-    ("https://youtu.be/BrHClxlgUnw", "neolatin"),
 ]
 
 prompts = [
