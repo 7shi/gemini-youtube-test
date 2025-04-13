@@ -8,7 +8,7 @@
         "properties": {
           "time": {
             "type": "string",
-            "description": "The timestamp indicating when the scene occurs in the video ('HH:MM:SS')."
+            "description": "The timestamp indicating when the scene occurs in the video ('MM:SS')."
           },
           "visuals": {
             "type": "string",
