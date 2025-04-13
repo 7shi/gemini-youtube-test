@@ -59,9 +59,10 @@ uv run gemini-yt -m gemini-2.5-pro-exp-03-25 -s schema-m.json -o my-analysis.jso
 ## Project Structure
 
 - `gemini_yt/`: Main package directory containing the core functionality
-- `test-json.py`: Test JSON generator
-- `test-text.py`: Test Text generator
-- `test-article.py`: Article generator for processed video content
+- `test_common.py`: Common settings for testing
+- `test-json.py`: Test script for JSON output generation
+- `test-text.py`: Test script for Markdown text output generation
+- `test-article.py`: Test script for Markdown article output generation
 - `schema-1.json`: Basic JSON schema
 - `schema-m.json`: Detailed JSON schema (with speaker information)
 - `schema-a.json`: Transcription of audio only
