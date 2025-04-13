@@ -12,6 +12,10 @@ This project serves as a test environment for:
 - Output support in both JSON and Markdown formats
 - `gemini-yt` tool includes sample analysis scripts to help you get started.
 
+Detailed description (in Japanese)
+
+- https://qiita.com/7shi/items/7578f1710e76770f1af1
+
 ## Prerequisites
 
 To set up the environment for running the scripts, follow these steps:
